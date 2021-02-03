@@ -73,7 +73,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 5.3.0"></he
 <p>  <strong>A&amp;Q</strong></p>
 <ol>
 <li><p>istio-ingress-gateway为什么不使用k8s NodePort进行服务暴露？如下图所示，使用NodePort的情况下，从节点1进入的请求可能被转发到节点2进行处理，不适用于跨机房k8s集群</p>
-<p><img src="https://linmin.xyz/wp-content/uploads/2020/03/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_1584961059743.png" alt="image"></p>
+<p><img src="/images/1-1.png" alt="image"></p>
 </li>
 <li><p>为何不使用k8s官方推荐的LoadBalance作为istio-ingress-gateway的暴露方式？</p>
 <p>使用LB需要网络设备的支持（LoadBalancer在数据链路层发送ARP），需要服务器处于同一交换机内。对于跨机房k8s集群不适用。<span class="exturl"><a class="exturl__link"   target="_blank" rel="noopener" href="https://juejin.im/entry/5aeb158f518825672033e90f" >LB原理</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
